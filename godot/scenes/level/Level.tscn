@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=6 format=3]
 
 [ext_resource type="Script" path="res://scripts/core/Level.gd" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/ui/HUD.tscn" id="2"]
 [ext_resource type="PackedScene" path="res://scenes/systems/WaveSpawner.tscn" id="3"]
 [ext_resource type="PackedScene" path="res://scenes/level/BuildSpot.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/Goblin.tscn" id="5"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1")
@@ -49,6 +50,10 @@ position = Vector2(870, 500)
 
 [node name="BuildSpotE" parent="BuildSpots" instance=ExtResource("4")]
 position = Vector2(1060, 270)
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Goblin" parent="Enemies" instance=ExtResource("5")]
 
 [node name="WaveSpawner" parent="." instance=ExtResource("3")]
 
